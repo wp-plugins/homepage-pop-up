@@ -4,7 +4,7 @@ Donate link: http://www.magneticlab.ch/
 Tags: homepage, popup, pop-up, jquery, custom, custom popup, index, admin, mlab, magneticlab
 Requires at least: 3.5.0
 Tested up to: 4.0
-Stable tag: 4.0
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,7 @@ Just add a simple jquery pop-up on the home page. Add a title and important info
 http://www.magneticlab.ch/
 
 = Bug Submission and Forum Support =
-suppor@magneticlab.ch
+support@magneticlab.ch
 
 = Please Vote and Enjoy =
 Your votes really make a difference! Thanks.
