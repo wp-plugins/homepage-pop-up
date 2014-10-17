@@ -2,6 +2,13 @@
 // Copyright (c) 2014 Magneticlab (http://www.magneticlab.ch)
 
 jQuery(document).ready(function(){
+	
+	jQuery('#preview_help').hide();	
+	
+	if ( jQuery( "#wp-popup_text-wrap" ).hasClass( "tmce-active" ) ){
+		jQuery('#mlab_popup_preview').prop('disabled', true); 
+		jQuery('#preview_help').show();		
+	}
 							   		   
 	//Close Popups and Fade Layer
 	jQuery('a.close, #fade').live('click', function() {
@@ -13,7 +20,7 @@ jQuery(document).ready(function(){
 	});
 	
 	// Preview function in admin page
-	jQuery('#mlab_popup_preview').live('click', function() {
+	jQuery('#mlab_popup_preview').live('click', function() { 
 		//reset
 		jQuery('#preview_titre').html( '' );
 		jQuery('#preview_text').html( '' ); 
@@ -26,6 +33,18 @@ jQuery(document).ready(function(){
 		jQuery('#preview_text').append( text ); 
 		jQuery('.popup_block').css( "max-width", width );  
 		jQuery('#fade , .popup_block').fadeIn();
+	}); 
+	
+	// Preview only available on text editor	
+	jQuery('#popup_text-tmce, #popup_text-html').live('click', function() {			 
+		if ( jQuery('#mlab_popup_preview').is(':disabled') == false ){ 
+			jQuery('#mlab_popup_preview').prop('disabled', true); 
+			jQuery('#preview_help').show();
+		} 
+		else if ( jQuery('#mlab_popup_preview').is(':disabled') == true ){ 
+			jQuery('#mlab_popup_preview').prop('disabled', false);
+			jQuery('#preview_help').hide();
+		} 
 	}); 
 	
 	// Preview image from new src in admin page
@@ -43,8 +62,7 @@ jQuery(document).ready(function(){
 	jQuery("#popup_img").change(function(){
 		readURL(this);
 	});
- 
- 
+	
 });
 
 

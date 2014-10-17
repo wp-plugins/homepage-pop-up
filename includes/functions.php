@@ -33,10 +33,10 @@
 	  global $statut;  
 	  switch($statut){
 		  case'success':
-		  echo '<div id="message" class="updated"><p>Mise à jour réussie</p></div>';
+		  echo '<div id="message" class="updated"><p>' . __('Update  successful','mlab_popup') . '</p></div>';
 		  break;
 		  case'error':
-		  echo '<div id="message" class="error"><p>Une erreur est survenue lors de l\'enregistrement </p></div>';
+		  echo '<div id="message" class="error"><p> ' . __('Unable to update','mlab_popup') . ' </p></div>'; 
 		  break;
 	  }
 	  
@@ -60,8 +60,8 @@
   function mlab_create_settings_page() {
 	  global $mlab_settings_page;
 	  if (function_exists('add_options_page')) {
-			 $page_title 	= __('Homepage Pop-up', 'mlab-popup');
-			 $menu_title 	= __('Homepage Pop-up', 'mlab-popup');;
+			 $page_title 	= 'Homepage Pop-up';
+			 $menu_title 	= 'Homepage Pop-up';
 			 $capability 	= 'manage_options';
 			 $menu_slug 	= MLAB_PLUGIN_SLUG;
 			 $function 		= array('mlab_popup','showOptionsPage');
@@ -69,7 +69,7 @@
 	  }
 	  
   }
-  	 
+ 
 	  
   // Ajout des CSS et JS
   function mlab_load_scripts($hook) {
