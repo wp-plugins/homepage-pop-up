@@ -44,7 +44,9 @@ support@magneticlab.ch
 
 1. Creating simple pop-up in the admin interface
 
-2. Result on the homepage
+2. Preview on Admin page
+
+3. Result on the homepage
 
 == Changelog == 
 = 1.2 =
