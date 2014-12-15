@@ -3,27 +3,19 @@ Contributors: magneticlab_ch
 Donate link: http://magneticlab.ch/mlabpopup/
 Tags: homepage, popup, pop-up, jquery, custom, custom popup, index, admin, mlab, magneticlab
 Requires at least: 3.5.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin for adding a simple jquery pop-up on the home page. Add a title and important information on your home page without getting blocked by AdBlock.
+Plugin for adding a simple jquery pop-up on the home page. Add a title andan important information on your home page without getting blocked any by AdBlock.
 
 == Description ==
  
-Just add a simple jquery pop-up on the home page. Add a title and important information on your home page without getting blocked by AdBlock.
+Just add a simple jquery pop-up on the home page. Add a title and an important information on your home page without getting blocked by any AdBlock.
 
 = Tested on =
-* Mac Firefox 	:)
-* Mac Safari 	:)
-* Mac Chrome	:)
-* PC Safari 	:)
-* PC Chrome	    :)
-* PC Firefox	:)
-* iPhone Safari :)
-* iPad Safari 	:)
-* PC ie7	    :S
+* Chrome (PC, MAC), Firefox (PC, MAC), Safari (PC, MAC, iPhone, iPad), ie7-11 (PC).
 
 = Website =
 http://www.magneticlab.ch/
@@ -55,6 +47,12 @@ support@magneticlab.ch
 2. Result on the homepage
 
 == Changelog == 
+= 1.2 =
+* New popup design
+* New admin design
+* More responsive
+* Added possibility to enter the width of the popup
+* Added "call to action" button
 = 1.1 =
 * Minor bug fixes
 * Added Localization EN, FR, DE

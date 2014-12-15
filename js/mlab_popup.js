@@ -1,20 +1,20 @@
-// mlab_popup.js v1.0.0, 28.08.2014
+// mlab_popup.js v1.0.0, 15.12.2014
 // Copyright (c) 2014 Magneticlab (http://www.magneticlab.ch)
 
 jQuery(document).ready(function(){
 	
 	jQuery('#preview_help').hide();	
 	
-	if ( jQuery( "#wp-popup_text-wrap" ).hasClass( "tmce-active" ) ){
-		jQuery('#mlab_popup_preview').prop('disabled', true); 
-		jQuery('#preview_help').show();		
-	}
+/*	if ( jQuery( "#wp-popup_text-wrap" ).hasClass( "tmce-active" ) ) {
+		 jQuery( '#mlab_popup_preview' ).prop('disabled', true); 
+		 jQuery( '#preview_help' ).show();		
+	}*/
 							   		   
 	//Close Popups and Fade Layer
-	jQuery('a.close, #fade').live('click', function() {
+	jQuery( '.close' ).live( 'click', function() {
 		//When clicking on the close or fade layer...
-	  	jQuery('#fade , .popup_block').fadeOut(function() {
-			//jQuery('#fade, a.close').remove();  
+	  	jQuery( '.modal' ).fadeOut( function() {
+			 jQuery( '#modal-backdrops' ).hide();  
 		}); //fade them both out		
 		return false;
 	});
@@ -22,28 +22,47 @@ jQuery(document).ready(function(){
 	// Preview function in admin page
 	jQuery('#mlab_popup_preview').live('click', function() { 
 		//reset
-		jQuery('#preview_titre').html( '' );
-		jQuery('#preview_text').html( '' ); 
+		jQuery('.modal-title').html('');
+		jQuery('.modal-body').html('');
+		jQuery('.modal-label').val('');
+		jQuery('.modal-link').attr("href", "#")
+		jQuery( '.modal-footer' ).hide();
 		//get		
-		var titre = jQuery('#popup_titre').attr( 'value');
+		var titre = jQuery('#popup_titre').attr( 'value' );
 		var text  = jQuery('#popup_text').val(); 
-		var width = jQuery('#popup_width').attr( 'value')+'px';  
+		var width = jQuery('#popup_width').attr( 'value' ); 
+		var label = jQuery('#popup_label').attr( 'value' ); 
+		var url = jQuery('#popup_link').attr( 'value' );  
 		//set
-		jQuery('#preview_titre').append( titre );
-		jQuery('#preview_text').append( text ); 
-		jQuery('.popup_block').css( "max-width", width );  
-		jQuery('#fade , .popup_block').fadeIn();
+		if ( url.length > 0 && label.length > 0){ 
+			jQuery( '.modal-footer' ).show(); 			
+		}
+		jQuery('.modal-title').html( titre );
+		jQuery('.modal-body').html( text ); 
+		jQuery('.modal-dialog').css( "width", width+'px' );
+		jQuery('.modal-label').val(label);
+		jQuery('.modal-link').attr("href", url) 
+		jQuery('.modal').fadeIn(); 
+	}); 
+	
+	if ( jQuery( '#mlab_popup_preview' ).is( ':disabled' ) == true ){ 
+			jQuery( '#mlab_popup_preview' ).prop( 'disabled', false );
+			jQuery( '#preview_help' ).hide(); 	
+		}
+	
+	// Preview only available on text editor	
+	jQuery('#popup_text-tmce').on('click', function() {			 
+		if ( jQuery('#mlab_popup_preview').is(':disabled') == false ){ 
+			jQuery('#mlab_popup_preview').prop('disabled', true); 
+			jQuery('#preview_help').show();	
+		} 
 	}); 
 	
 	// Preview only available on text editor	
-	jQuery('#popup_text-tmce, #popup_text-html').live('click', function() {			 
-		if ( jQuery('#mlab_popup_preview').is(':disabled') == false ){ 
-			jQuery('#mlab_popup_preview').prop('disabled', true); 
-			jQuery('#preview_help').show();
-		} 
-		else if ( jQuery('#mlab_popup_preview').is(':disabled') == true ){ 
-			jQuery('#mlab_popup_preview').prop('disabled', false);
-			jQuery('#preview_help').hide();
+	jQuery('#popup_text-html').on('click', function() {		 
+		if ( jQuery( '#mlab_popup_preview' ).is( ':disabled' ) == true ){ 
+			jQuery( '#mlab_popup_preview' ).prop( 'disabled', false );
+			jQuery( '#preview_help' ).hide();
 		} 
 	}); 
 	

@@ -4,9 +4,8 @@
   // Base de Données
   function mlab_install() {
 	 global $wpdb;
-	 //global $mlab_db_version;
 	 
-	 $installed_ver = get_option( "mlab_db_version" );
+	 add_option( "mlab_db_version", MLAB_PLUGIN_VERSION );
   
 	 $table_name = $wpdb->prefix . MLAB_DB_TABLE;
 	 
@@ -28,7 +27,6 @@
 			  ) $charset_collate;";	  
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );		
-	add_option( "mlab_db_version", MLAB_PLUGIN_VERSION );
 	 
 	 
 	 
@@ -74,3 +72,5 @@
 	  delete_option( 'mlab_db_version' );  
 	  
   }
+  
+  

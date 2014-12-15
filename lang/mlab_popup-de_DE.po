@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Homepage Pop-up vVersion 1.0.0\n"
+"Project-Id-Version: Homepage Pop-up vVersion 1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-10-17 09:04:40+0000\n"
+"PO-Revision-Date: 2014-12-15 10:25:39+0000\n"
 "Last-Translator: mlab <support@magneticlab.ch>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: includes/functions.php:36
+#: includes/functions.php:48
 #@ mlab_popup
 msgid "Update  successful"
 msgstr "Update erfolgreich"
 
-#: includes/functions.php:39
+#: includes/functions.php:51
 #@ mlab_popup
 msgid "Unable to update"
 msgstr "Kann nicht aktualisieren"
@@ -35,45 +35,91 @@ msgstr "Kann nicht aktualisieren"
 msgid "Enter your text here"
 msgstr "Geben Sie Ihren Text hier"
 
-#: views/admin.php:20
-#, php-format
-#@ mlab_popup
-msgid "by %1$s from %2$s"
-msgstr "Von %1$s aus %2$s"
-
-#: views/admin.php:25
+#: views/admin.php:34
+#: views/admin.php:38
 #@ mlab_popup
 msgid "Active"
 msgstr "Aktiv"
 
-#: views/admin.php:29
+#: views/admin.php:75
 #@ mlab_popup
 msgid "Heading"
 msgstr "Kopfzeile"
 
-#: views/admin.php:33
+#: views/admin.php:81
 #@ mlab_popup
 msgid "Content"
 msgstr "Text"
 
-#: views/admin.php:39
+#: views/admin.php:46
 #@ mlab_popup
 msgid "Save"
 msgstr "Speichern"
 
-#: views/admin.php:40
+#: views/admin.php:47
 #@ mlab_popup
 msgid "Preview"
 msgstr "Vorschau"
 
-#: views/admin.php:41
+#: views/admin.php:50
 #@ mlab_popup
 msgid "Preview is only available in text mode"
 msgstr "Vorschau ist nur in Textform zur Verfügung"
 
-#: views/admin.php:56
-#: views/popup.php:32
+#: views/admin.php:115
+#: views/popup.php:29
 #@ mlab_popup
 msgid "Close Window"
 msgstr "Fenster schließen"
+
+#: includes/functions.php:16
+#@ mlab_popup
+msgid ""
+"Your URL ist not valide.<br />\n"
+" \t\t  Please provide a valide link. (http://www.example.com)"
+msgstr ""
+"Dieser Link ist ungültig.<br />\n"
+" \\\t\\\t  Geben Sie bitte einen gültiges Link ein. (http://www.example.com)"
+
+#: views/admin.php:30
+#@ mlab_popup
+msgid "Action"
+msgstr "Aktion"
+
+#: views/admin.php:33
+#@ mlab_popup
+msgid "Stat"
+msgstr "Status"
+
+#: views/admin.php:34
+#: views/admin.php:41
+#@ mlab_popup
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: views/admin.php:68
+#@ mlab_popup
+msgid "Width"
+msgstr "Breite"
+
+#: views/admin.php:87
+#@ mlab_popup
+msgid "Call to action"
+msgstr "Link"
+
+#: views/admin.php:89
+#@ mlab_popup
+msgid "Label"
+msgstr "Etikett"
+
+#: views/admin.php:90
+#@ mlab_popup
+msgid "Link"
+msgstr "Link"
+
+#: views/admin.php:103
+#, php-format
+#@ mlab_popup
+msgid "by %1$s | %2$s"
+msgstr "Von %1$s | %2$s"
 
