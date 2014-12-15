@@ -15,7 +15,7 @@
 	  $width			= isset($_POST['popup_width'])?	$_POST['popup_width']:	'350';
 	  $label			= $_POST['popup_label'];
 	  $link				= $_POST['popup_link'];
-	  if( ! filter_var( $link, FILTER_VALIDATE_URL ) ) {
+	  if( ! empty( $link ) && ! filter_var( $link, FILTER_VALIDATE_URL ) ) {
 		  $mlab_error = true; return false;
 	  }
  
