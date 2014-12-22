@@ -106,7 +106,7 @@
   function add_popup(){
 	  
 	  // Seulement sur la page d'accueil
-	  if ( is_home() or $_SERVER["REQUEST_URI"] == "/" || $_SERVER["REQUEST_URI"] == "/index.php" )
+	  if ( is_home() || is_front_page() )
 	  	include_once( MLAB_ROOT_PATH . '/views/popup.php' );
 		
   } 

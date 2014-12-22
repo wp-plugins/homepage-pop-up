@@ -49,6 +49,8 @@ support@magneticlab.ch
 3. Result on the homepage
 
 == Changelog == 
+= 1.2.1 =
+* Minor bug fix 
 = 1.2 =
 * New popup design
 * New admin design
