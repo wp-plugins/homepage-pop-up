@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
 	}*/
 							   		   
 	//Close Popups and Fade Layer
-	jQuery( '.close' ).live( 'click', function() {
+	jQuery( '.close' ).on( 'click', function() {
 		//When clicking on the close or fade layer...
 	  	jQuery( '.modal' ).fadeOut( function() {
 			 jQuery( '#modal-backdrops' ).hide();  
@@ -20,7 +20,7 @@ jQuery(document).ready(function(){
 	});
 	
 	// Preview function in admin page
-	jQuery('#mlab_popup_preview').live('click', function() { 
+	jQuery('#mlab_popup_preview').on('click', function() { 
 		//reset
 		jQuery('.modal-title').html('');
 		jQuery('.modal-body').html('');

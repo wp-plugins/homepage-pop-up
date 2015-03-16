@@ -10,7 +10,7 @@
 	  $wpdb->show_errors();
 	  $table_name		= $wpdb->prefix . MLAB_DB_TABLE;
 	  $titre			= $_POST['popup_titre'];
-	  $text				= get_magic_quotes_gpc() ? stripslashes($_POST['content']) : $_POST['popup_text'];
+	  $text				= get_magic_quotes_gpc() ? stripslashes($_POST['popup_text']) : $_POST['popup_text'];
 	  $activate			= isset($_POST['activate'])?	$_POST['activate']:		null;
 	  $width			= isset($_POST['popup_width'])?	$_POST['popup_width']:	'350';
 	  $label			= $_POST['popup_label'];

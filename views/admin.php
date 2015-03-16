@@ -115,8 +115,7 @@ print '<div class="modal fades in "tabindex="-1" role="dialog" style="display: n
          <img class="close" src="' . MLAB_ROOT_URL . '/images/close_pop.png" title="' . __('Close Window','mlab_popup') . '" alt="Close" width="25" height="25"> 
           <h4 class="modal-title">'.$result[0]->titre.'</h4>
         </div>
-        <div class="modal-body">          
-           '.$text.'
+        <div class="modal-body">  
         </div>
         <div class="modal-footer" style="display:none">
 			<a href="" class="modal-link"><input type="button" class="button button-primary modal-label" value=""></a>

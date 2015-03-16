@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin for adding a simple jquery pop-up on the home page. Add a title andan important information on your home page without getting blocked any by AdBlock.
+Plugin for adding a simple jquery pop-up on the home page. Add a title and an important information on your home page without getting blocked any by AdBlock.
 
 == Description ==
  
@@ -35,7 +35,7 @@ Your votes really make a difference! Thanks.
 
 == Frequently Asked Questions ==
 
-= Q. I have a question =
+= Q. I have a question = 
 A. Contact us at: 
 support@magneticlab.ch
 
@@ -49,6 +49,8 @@ support@magneticlab.ch
 3. Result on the homepage
 
 == Changelog == 
+= 1.2.2 =
+* Minor bug fix 
 = 1.2.1 =
 * Minor bug fix 
 = 1.2 =
